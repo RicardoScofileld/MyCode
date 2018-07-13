@@ -24,8 +24,8 @@ class ProxyIP():
             item = {}
             ip = tr.xpath('./td[1]/text()')[0]
             port = tr.xpath('./td[2]/text()')[0]
-            type = tr.xpath('./td[4]/text()')[0]
-            item[type] = type + '://' + ip + ':' + port
+            ip_type = tr.xpath('./td[4]/text()')[0]
+            item[ip_type] = ip_type + '://' + ip + ':' + port
             proxy_ip_list.append(item)
         return proxy_ip_list
 
